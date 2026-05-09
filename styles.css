@@ -647,3 +647,104 @@ body {
   *, *::before, *::after { animation-duration: 0.001s !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- Mobile polish ---------- */
+@media (max-width: 760px) {
+  body { line-height: 1.6; }
+
+  .ticker { padding: 7px 0; font-size: 11px; }
+  .ticker__track { gap: 18px; animation-duration: 24s; }
+
+  .nav { padding: 10px 14px; gap: 10px; }
+  .nav__cta-group { gap: 6px; }
+  .logo-cube { width: 24px; height: 24px; border-radius: 6px; }
+  .logo-text { font-size: 15px; }
+
+  .hero { padding: 32px 18px 40px; }
+  .hero__inner { gap: 28px; }
+  .badge { font-size: 12px; padding: 6px 12px; margin-bottom: 16px; }
+  .hero__title {
+    font-size: clamp(52px, 14vw, 84px);
+    margin-bottom: 22px;
+    text-shadow: 0 4px 0 var(--red-dark), 0 10px 28px rgba(225,6,0,0.4);
+  }
+  .hero__title .hero__tag { font-size: 13px; letter-spacing: 0.22em; margin-top: 14px; }
+  .hero__quote { font-size: 17px; padding: 16px 18px; margin-bottom: 18px; }
+  .quote-source { font-size: 12px; }
+  .hero__sub { font-size: 15px; line-height: 1.7; margin-bottom: 24px; }
+
+  .hero__cta { gap: 8px; }
+  .hero__cta .btn {
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 13px 18px;
+    font-size: 14px;
+  }
+
+  .ca { padding: 10px; gap: 8px; flex-wrap: wrap; }
+  .ca__label { font-size: 11px; padding: 4px 8px; }
+  .ca code { font-size: 11px; flex-basis: 100%; order: 3; padding-top: 4px; }
+  .ca__copy { padding: 7px 12px; font-size: 12px; }
+
+  .tweet { padding: 18px; transform: rotate(0.5deg); }
+  .tweet__body { font-size: 24px; }
+  .tweet__sticker {
+    font-size: 11px; padding: 6px 12px;
+    top: -12px; right: 6px;
+    transform: rotate(6deg);
+  }
+
+  .stats { gap: 10px; margin-top: 36px; }
+  .stat { padding: 16px 10px; }
+  .stat__num { font-size: 34px; }
+  .stat__lbl { font-size: 12px; }
+
+  .section { padding: 56px 18px; }
+  .section__head { margin-bottom: 28px; }
+  .section__kicker { font-size: 12px; letter-spacing: 0.3em; }
+  .section__title { font-size: clamp(38px, 11vw, 56px); margin-bottom: 14px; }
+  .section__title .hl::after { bottom: -3px; height: 4px; }
+  .section__lede { font-size: 15px; line-height: 1.75; }
+
+  .bless-grid { gap: 12px; }
+  .bless-card { padding: 22px; }
+  .bless-card__icon { font-size: 32px; margin-bottom: 10px; }
+  .bless-card h3 { font-size: 20px; margin-bottom: 8px; }
+  .bless-card p { font-size: 14px; line-height: 1.7; }
+
+  .section--cta { padding-bottom: 70px; }
+  .cta-frame { padding: 44px 20px; border-radius: 22px; }
+  .cta-han { font-size: 75vw; -webkit-text-stroke-width: 1.5px; }
+  .section--cta .section__lede { margin-bottom: 28px; }
+  .cta-row { flex-direction: column; gap: 10px; }
+  .cta-row .btn { width: 100%; justify-content: center; padding: 16px 22px; font-size: 15px; }
+
+  .foot { padding: 32px 18px; }
+  .foot__brand { font-size: 16px; }
+  .foot__disc { font-size: 12px; line-height: 1.7; }
+  .foot__ca { font-size: 11px; }
+
+  .toast { bottom: 16px; padding: 10px 20px; font-size: 13px; }
+
+  /* Calm down floating lanterns on mobile */
+  .lantern:nth-child(n+5) { display: none; }
+}
+
+@media (max-width: 380px) {
+  .nav { padding: 9px 12px; }
+  .logo-text { font-size: 14px; }
+  .btn--sm { padding: 7px 10px; font-size: 11px; gap: 4px; }
+  .nav__cta-group .btn--sm svg { width: 12px; height: 12px; }
+  .hero { padding: 24px 14px 32px; }
+  .hero__title { font-size: 48px; }
+  .section { padding: 48px 14px; }
+  .tweet__sticker { font-size: 10px; padding: 5px 10px; }
+}
+
+/* Sharper tap targets */
+@media (hover: none) and (pointer: coarse) {
+  .btn, .ca__copy, .nav__cta-group .btn { min-height: 44px; }
+  .tweet:hover { transform: rotate(0.5deg); border-color: #2a2c33; }
+  .bless-card:hover { transform: none; }
+  .stat:hover { transform: none; }
+}
