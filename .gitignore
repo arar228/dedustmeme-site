@@ -4,3 +4,18 @@ node_modules/
 .env
 .vscode/
 .idea/
+
+# Local secret hygiene (credentials stay outside Git)
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+.secrets/
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+*.session
+*.session-journal
