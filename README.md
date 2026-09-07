@@ -3,7 +3,7 @@
 Chinese-language static landing-page source with a responsive typographic layout,
 project reference sections, a contract copy control, and browser animation.
 
-**Status:** static frontend source with a Railway configuration. Existing product language
+**Status:** static frontend source with a retained historical Railway configuration. Existing product language
 about DeDust or endorsement is part of the supplied page content; this documentation
 pass does not establish an official affiliation, token guarantees, or live deployment availability.
 
@@ -24,7 +24,7 @@ pass does not establish an official affiliation, token guarantees, or live deplo
 | [styles.css](styles.css) | Responsive visual system and animation |
 | [script.js](script.js) | Copy, scroll, tilt, reveal, and keyboard effects |
 | [package.json](package.json) | Optional `serve` dependency and start command |
-| [railway.json](railway.json) | Existing Nixpacks / Railway launch configuration |
+| [railway.json](railway.json) | Historical Nixpacks / Railway launch reference |
 
 ## Local preview
 
@@ -50,8 +50,8 @@ installation path does not provide a frozen dependency resolution.
 
 ## Hosting and content maintenance
 
-The Railway configuration uses Nixpacks and a `serve` command with `PORT` supplied by the host.
-It is retained as an existing deployment reference, not a verified deployment result.
+The retained Railway configuration describes the earlier Nixpacks / `serve` path with `PORT` supplied by the host.
+It is historical reference material; current VPS serving settings are managed separately.
 Static hosting can also serve `index.html`, `styles.css`, and `script.js` directly.
 
 Keep the copy-button element IDs aligned with `script.js`, preserve the Chinese product
